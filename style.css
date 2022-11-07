@@ -27,3 +27,62 @@ body {
 
 }
 
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+    z-index: 111;
+}
+.clock .hour,
+.clock .minute,
+.clock .second {
+    position: absolute;
+}
+.clock .hour, .hours {
+    width: 160px;
+    height: 210px;
+}
+.clock .minute, .minutes {
+    width: 190px;
+    height: 250px;
+}
+.clock .second, .seconds{
+    width: 230px;
+    height: 300px;
+}
+.hours, .minutes, .seconds{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+.hours::before{
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 110px;
+    border-radius: 6px;
+    background-color: rgb(154, 143, 209);
+    z-index: 10;
+}
+.minutes::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 130px;
+    border-radius: 6px;
+    background-color: rgb(33, 85, 68);
+    z-index: 11;
+}
+.seconds::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 160px;
+    border-radius: 6px;
+    background-color: rgb(0, 8, 150);
+    z-index: 12;
+}
